@@ -141,13 +141,13 @@ namespace TeacherCourseProject
         protected global::System.Web.UI.WebControls.Button buttonClear;
 
         /// <summary>
-        /// button2 control.
+        /// buttonSearchByID control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button button2;
+        protected global::System.Web.UI.WebControls.Button buttonSearchByID;
 
         /// <summary>
         /// buttonAssignUpdateCourse control.

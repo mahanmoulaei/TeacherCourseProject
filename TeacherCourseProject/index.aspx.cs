@@ -32,7 +32,27 @@ namespace TeacherCourseProject
 
         }
 
+        protected void dropdownCourseCode_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void dropdownGroupNumber_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
         protected void buttonClear_onClick(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void buttonSearchByID_onClick(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void buttonAssignUpdateCourse_Click(object sender, EventArgs e)
         {
 
         }

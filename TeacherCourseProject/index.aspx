@@ -137,7 +137,7 @@
                                 </td>
 
                                 <td>
-                                    <asp:DropDownList ID="dropdownCourseCode" runat="server" Width="200px" OnSelectedIndexChanged="dropdownCourseCode_Changed" AutoPostBack="true">
+                                    <asp:DropDownList ID="dropdownCourseCode" runat="server" Width="200px" OnSelectedIndexChanged="dropdownCourseCode_SelectedIndexChanged" AutoPostBack="true">
                                         <%--<asp:ListItem>Select A Car Model...</asp:ListItem>-->--%>
                                     </asp:DropDownList>
                                 </td>
@@ -153,7 +153,7 @@
                                 </td>
 
                                 <td>
-                                    <asp:DropDownList ID="dropdownGroupNumber" runat="server" Width="200px" OnSelectedIndexChanged="dropdownGroupNumber_Changed" AutoPostBack="true">
+                                    <asp:DropDownList ID="dropdownGroupNumber" runat="server" Width="200px" OnSelectedIndexChanged="dropdownGroupNumber_SelectedIndexChanged" AutoPostBack="true">
                                         <%--<asp:ListItem>Select A Car Model...</asp:ListItem>-->--%>
                                     </asp:DropDownList>
                                 </td>
@@ -169,11 +169,11 @@
                                 </td>
 
                                 <td align="center">
-                                    <asp:Button ID="button2" runat="server" Text="Search By ID" OnClick="buttonShowAll_onClick" CssClass="btn btn-success" Width="150px"/>
+                                    <asp:Button ID="buttonSearchByID" runat="server" Text="Search By ID" OnClick="buttonSearchByID_onClick" CssClass="btn btn-success" Width="150px"/>
                                 </td>
 
                                 <td align="center">
-                                    <asp:Button ID="buttonAssignUpdateCourse" runat="server" Text="Assign/Update Course" OnClick="buttonAssignUpdateCourse_onClick" CssClass="btn btn-success" Width="150px"/>
+                                    <asp:Button ID="buttonAssignUpdateCourse" runat="server" Text="Assign/Update Course" OnClick="buttonAssignUpdateCourse_Click" CssClass="btn btn-success" Width="150px"/>
                                 </td>
                             </tr>
                         </table>

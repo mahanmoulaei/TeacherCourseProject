@@ -11,6 +11,14 @@ namespace TeacherCourseProject
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Page.IsPostBack)
+            {
+
+            }
+        }
+
+        protected void radioButtonSearchBy_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
 
@@ -24,7 +32,7 @@ namespace TeacherCourseProject
 
         }
 
-        protected void radioButtonSearchBy_SelectedIndexChanged(object sender, EventArgs e)
+        protected void buttonClear_onClick(object sender, EventArgs e)
         {
 
         }

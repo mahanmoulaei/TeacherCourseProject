@@ -39,15 +39,18 @@
         .auto-style11 {
         text-align: center;
         }
+
+        .120width{
+            width: 120px;
+        }
     </style>
 </head>
 <body>
     <h1 class="auto-style1">SMTI ONLINE Teacher-Course Assignment</h1>
     <form id="form1" runat="server">
-        <div class="alert alert-danger">
+        <div class="alert alert-warning">
             <table align="center" class="auto-style10">
                 <tr>
-
                     <td colspan="2">
                         <table class="auto-style4" align="center">
                             <tr>
@@ -62,7 +65,7 @@
 
                             <tr>
                                 <td colspan="3">
-                                    <asp:TextBox ID="textSearchField" runat="server" ReadOnly="false" Width="300px"></asp:TextBox>
+                                    <asp:TextBox ID="textBoxSearchField" runat="server" ReadOnly="false" Width="300px"></asp:TextBox>
                                 </td>
                             </tr>
 
@@ -104,11 +107,99 @@
         <br />
         <br />
         <br />
+        <br />
+        <br />
+        <br />
+        <br />
 
-        <br />
-        <br />
-        <br />
-        <br />
+        <div class="alert alert-danger">
+            <table align="center" class="auto-style10">
+                <tr>
+                    <td colspan="2">
+                        <table class="auto-style4" align="center">
+                            <tr>
+                                <td>
+                                    <asp:Label ID="labelEmployeeID" runat="server" Text="Employee ID:" Width="200px"></asp:Label>
+                                </td>
+
+                                <td >
+                                    <asp:TextBox ID="textBoxEmployeeID" runat="server" ReadOnly="false" Width="200px"></asp:TextBox>
+                                </td>
+
+                                <td>
+                                    <asp:Label runat="server" Text="&nbsp" Width="200px"></asp:Label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="labelCourseCode" runat="server" Text="Course Code:" Width="200px"></asp:Label>
+                                </td>
+
+                                <td>
+                                    <asp:DropDownList ID="dropdownCourseCode" runat="server" Width="200px" OnSelectedIndexChanged="dropdownCourseCode_Changed" AutoPostBack="true">
+                                        <%--<asp:ListItem>Select A Car Model...</asp:ListItem>-->--%>
+                                    </asp:DropDownList>
+                                </td>
+
+                                <td>
+                                    <asp:Label runat="server" Text="&nbsp" Width="200px"></asp:Label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <asp:Label ID="labelGroupNumber" runat="server" Text="Group Number:" Width="200px"></asp:Label>
+                                </td>
+
+                                <td>
+                                    <asp:DropDownList ID="dropdownGroupNumber" runat="server" Width="200px" OnSelectedIndexChanged="dropdownGroupNumber_Changed" AutoPostBack="true">
+                                        <%--<asp:ListItem>Select A Car Model...</asp:ListItem>-->--%>
+                                    </asp:DropDownList>
+                                </td>
+
+                                <td>
+                                    <asp:Label runat="server" Text="&nbsp" Width="200px"></asp:Label>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center">
+                                    <asp:Button ID="buttonClear" runat="server" Text="Clear" OnClick="buttonClear_onClick" CssClass="btn btn-success" Width="150px"/>
+                                </td>
+
+                                <td align="center">
+                                    <asp:Button ID="button2" runat="server" Text="Search By ID" OnClick="buttonShowAll_onClick" CssClass="btn btn-success" Width="150px"/>
+                                </td>
+
+                                <td align="center">
+                                    <asp:Button ID="buttonAssignUpdateCourse" runat="server" Text="Assign/Update Course" OnClick="buttonAssignUpdateCourse_onClick" CssClass="btn btn-success" Width="150px"/>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    
+                </tr>
+
+                <tr>
+                    <td colspan="3" class="auto-style1">
+                        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="YellowGreen" BorderStyle="None" BorderWidth="1px" CellPadding="5" GridLines="Vertical">
+                            <AlternatingRowStyle BackColor="#2D9AB2"/>
+                            <FooterStyle BackColor="#D82BDE" ForeColor="Black"/>
+                            <HeaderStyle BackColor="#1EDE4C" ForeColor="White" Font-Bold="true"/>
+                            <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center"/>
+                            <SelectedRowStyle BackColor="#FF5733" ForeColor="White" Font-Bold="true" />
+                            <SortedAscendingCellStyle BackColor="#DAF7A6" />
+                            <SortedAscendingHeaderStyle BackColor="Yellow" />
+                            <SortedDescendingCellStyle BackColor="#3160CC" />
+                            <SortedDescendingHeaderStyle BackColor="#17F9F2" />
+                        </asp:GridView>
+                    </td>     
+
+                </tr>    
+            </table>
+        </div>
     </form>
 </body>
 </html>

@@ -69,13 +69,13 @@ namespace TeacherCourseProject
         protected global::System.Web.UI.WebControls.Button buttonShowAll;
 
         /// <summary>
-        /// gridResult control.
+        /// gridViewTeachers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView gridResult;
+        protected global::System.Web.UI.WebControls.GridView gridViewTeachers;
 
         /// <summary>
         /// labelEmployeeID control.
@@ -141,30 +141,30 @@ namespace TeacherCourseProject
         protected global::System.Web.UI.WebControls.Button buttonClear;
 
         /// <summary>
-        /// buttonSearchByID control.
+        /// buttonDelete control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button buttonSearchByID;
+        protected global::System.Web.UI.WebControls.Button buttonDelete;
 
         /// <summary>
-        /// buttonAssignUpdateCourse control.
+        /// buttonAssignCourse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button buttonAssignUpdateCourse;
+        protected global::System.Web.UI.WebControls.Button buttonAssignCourse;
 
         /// <summary>
-        /// GridView1 control.
+        /// gridViewCourseAssignments control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.GridView gridViewCourseAssignments;
     }
 }

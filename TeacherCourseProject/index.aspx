@@ -10,34 +10,38 @@
 
     <style type="text/css">
         .auto-style1 {
-        text-decoration: underline;
-        text-align: center;
+            text-decoration: underline;
+            text-align: center;
+        }
+
+        body {
+            background-color: #9cffe1;
         }
         .auto-style4 {
-        width: 258px;
+            width: 258px;
         }
         .auto-style6 {
-        width: 99px;
+            width: 99px;
         }
         .auto-style7 {
-        height: 23px;
-        width: 99px;
+            height: 23px;
+            width: 99px;
         }
         .auto-style5 {
-        height: 23px;
+            height: 23px;
         }
         .auto-style8 {
-        width: 99px;
-        height: 26px;
+            width: 99px;
+            height: 26px;
         }
         .auto-style9 {
-        height: 26px;
+            height: 26px;
         }
         .auto-style10 {
-        width: 600px;
+            width: 600px;
         }
         .auto-style11 {
-        text-align: center;
+            text-align: center;
         }
 
         .120width{
@@ -45,7 +49,7 @@
         }
     </style>
 </head>
-<body>
+<body class="body">
     <h1 class="auto-style1">SMTI ONLINE Teacher-Course Assignment</h1>
     <form id="form1" runat="server">
         <div class="alert alert-warning">
@@ -85,9 +89,10 @@
                 </tr>
 
                 <tr>
-                    <td colspan="3" class="auto-style1">
-                        <asp:GridView ID="gridResult" runat="server" BackColor="White" BorderColor="YellowGreen" BorderStyle="None" BorderWidth="1px" CellPadding="5" GridLines="Vertical">
-                            <AlternatingRowStyle BackColor="#2D9AB2"/>
+
+                    <td colspan="3" style="text-align:center;">
+                        <asp:GridView ID="gridViewTeachers" runat="server" BackColor="White" BorderColor="YellowGreen" BorderStyle="None" BorderWidth="1px" CellPadding="5" GridLines="Vertical" Width="600px" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridViewTeachers_SelectedIndexChanged">
+                            <%--<AlternatingRowStyle BackColor="#2D9AB2"/>--%>
                             <FooterStyle BackColor="#D82BDE" ForeColor="Black"/>
                             <HeaderStyle BackColor="#1EDE4C" ForeColor="White" Font-Bold="true"/>
                             <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center"/>
@@ -103,10 +108,6 @@
             </table>
         </div>
 
-        <br />
-        <br />
-        <br />
-        <br />
         <br />
         <br />
         <br />
@@ -137,7 +138,7 @@
                                 </td>
 
                                 <td>
-                                    <asp:DropDownList ID="dropdownCourseCode" runat="server" Width="200px" OnSelectedIndexChanged="dropdownCourseCode_SelectedIndexChanged" AutoPostBack="true">
+                                    <asp:DropDownList ID="dropdownCourseCode" runat="server" Width="200px" OnSelectedIndexChanged="dropdownCourseCode_SelectedIndexChanged" AutoPostBack="true" Enabled="true">
                                         <%--<asp:ListItem>Select A Car Model...</asp:ListItem>-->--%>
                                     </asp:DropDownList>
                                 </td>
@@ -153,7 +154,7 @@
                                 </td>
 
                                 <td>
-                                    <asp:DropDownList ID="dropdownGroupNumber" runat="server" Width="200px" OnSelectedIndexChanged="dropdownGroupNumber_SelectedIndexChanged" AutoPostBack="true">
+                                    <asp:DropDownList ID="dropdownGroupNumber" runat="server" Width="200px" OnSelectedIndexChanged="dropdownGroupNumber_SelectedIndexChanged" AutoPostBack="true" Enabled="true">
                                         <%--<asp:ListItem>Select A Car Model...</asp:ListItem>-->--%>
                                     </asp:DropDownList>
                                 </td>
@@ -169,11 +170,11 @@
                                 </td>
 
                                 <td align="center">
-                                    <asp:Button ID="buttonSearchByID" runat="server" Text="Search By ID" OnClick="buttonSearchByID_onClick" CssClass="btn btn-success" Width="150px"/>
+                                    <asp:Button ID="buttonDelete" runat="server" Text="Delete Assigned Course" OnClick="buttonDelete_onClick" CssClass="btn btn-success" Width="200px" />
                                 </td>
 
                                 <td align="center">
-                                    <asp:Button ID="buttonAssignUpdateCourse" runat="server" Text="Assign/Update Course" OnClick="buttonAssignUpdateCourse_Click" CssClass="btn btn-success" Width="150px"/>
+                                    <asp:Button ID="buttonAssignCourse" runat="server" Text="Assign Course" OnClick="buttonAssignCourse_onClick" CssClass="btn btn-success" Width="150px"/>
                                 </td>
                             </tr>
                         </table>
@@ -183,9 +184,9 @@
                 </tr>
 
                 <tr>
-                    <td colspan="3" class="auto-style1">
-                        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="YellowGreen" BorderStyle="None" BorderWidth="1px" CellPadding="5" GridLines="Vertical">
-                            <AlternatingRowStyle BackColor="#2D9AB2"/>
+                    <td colspan="3" style="text-align:center;">
+                        <asp:GridView ID="gridViewCourseAssignments" runat="server" BackColor="White" BorderColor="YellowGreen" BorderStyle="None" BorderWidth="1px" CellPadding="5" GridLines="Vertical" Width="600px" AutoGenerateSelectButton="True" OnSelectedIndexChanged="gridViewCourseAssignments_SelectedIndexChanged">
+                            <%--<AlternatingRowStyle BackColor="#2D9AB2"/>--%>
                             <FooterStyle BackColor="#D82BDE" ForeColor="Black"/>
                             <HeaderStyle BackColor="#1EDE4C" ForeColor="White" Font-Bold="true"/>
                             <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center"/>
